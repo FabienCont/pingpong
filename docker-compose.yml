@@ -14,10 +14,8 @@ services:
       context: .
     environment:
       START_AS_CLIENT: "true"
-      BACKEND_ENDPOINT: "http://server:3000"
-    depends_on:
-      - server
+      BACKEND_ENDPOINT: "http://localhost:3000"
     ports:
       - 8888:8888
     healthcheck:
-      test: ["CMD", "curl", "-f", "http://localhost:8888"]
+      test: ["CMD", "curl", "-f", "http://localhost:8888/index.html"]

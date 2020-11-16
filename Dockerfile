@@ -17,7 +17,7 @@ EXPOSE 3000
 EXPOSE 8888
 
 # be able to start as client if needed
-COPY nginx/app.conf.template /etc/nginx/templates/app.conf.template
-COPY app_conf_envsubst.sh .
+COPY replaceVariables.sh .
+COPY nginx/app.conf.template /etc/nginx/conf.d/app.conf
 ENTRYPOINT ["./entrypoint.sh"]
 CMD npm run server:prod

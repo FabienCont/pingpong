@@ -21,7 +21,6 @@ function update() {
 
     if(entitiesModif.length!=0){
         this.room.io.to(this.room.room).emit('updateEntities',{'entities':entitiesModif});
-
     }
     //emit
     this.player1.inputs = [];

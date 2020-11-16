@@ -3,7 +3,7 @@ import io from 'socket.io-client';
 let socketClient={};
 
 const connectToGame=function(handler){
-  var url = window.serverUrl
+  var url = window.SERVER_URL?window.SERVER_URL:"http://localhost:3000";
   socketClient = io.connect(url);
   window.socket = socketClient;
 };

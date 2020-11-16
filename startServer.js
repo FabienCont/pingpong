@@ -9,7 +9,7 @@ server.start(port);
 
 var envType=process.env.NODE_ENV || 'development';
 
-if(envType !== 'poduction'){
+if(envType !== 'production'){
 
   var loading=false;
 
