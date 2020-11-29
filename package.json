@@ -29,13 +29,11 @@
         "url": ""
     },
     "scripts": {
-        "build:client": "webpack --config ./webpack.production.js --colors --display-error-details",
-        "build:server": "webpack --config ./webpack.server.production.js --colors --display-error-details",
-        "server:dev:run": "node startServer.js",
-        "server:dev:watch": "webpack --watch --progress --config ./webpack.server.development.js --colors --display-error-details",
-        "server:prod": "node startServer.js",
-        "client:dev": "webpack-dev-server --config webpack.development.js",
-        "client:prod": "webpack-dev-server --config webpack.development.js"
+        "client:build_for_production": "webpack --config ./webpack.production.js --colors --display-error-details",
+        "client:run_for_development": "webpack-dev-server --config webpack.development.js",
+        "server:build_for_production": "webpack --config ./webpack.server.production.js --colors --display-error-details",
+        "server:run_for_development": "webpack --watch --progress --config ./webpack.server.development.js --colors --display-error-details",
+        "server:run_for_production": "node startServer.js"
     },
     "dependencies": {
         "express": "^4.17.1",

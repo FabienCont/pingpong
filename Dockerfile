@@ -10,8 +10,8 @@ ADD package*.json ./
 RUN npm install
 
 ADD . .
-RUN npm run build:server
-RUN npm run build:client
+RUN npm run client:build_for_production
+RUN npm run server:build_for_production
 
 EXPOSE 3000
 EXPOSE 8888
@@ -20,4 +20,4 @@ EXPOSE 8888
 COPY replaceVariables.sh .
 COPY nginx/app.conf.template /etc/nginx/conf.d/app.conf
 ENTRYPOINT ["./entrypoint.sh"]
-CMD npm run server:prod
+CMD npm run server:run_for_production
