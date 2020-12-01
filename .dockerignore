@@ -1,5 +1,4 @@
 node_modules
-dist/bundle
-distServer
 docs
-build
+documentation
+dist
