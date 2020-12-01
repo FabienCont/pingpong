@@ -18,6 +18,6 @@ EXPOSE 8888
 
 # be able to start as client if needed
 COPY replaceVariables.sh .
-COPY nginx/app.conf.template /etc/nginx/conf.d/app.conf
+COPY template/nginx/app.conf.template /etc/nginx/conf.d/app.conf
 ENTRYPOINT ["./entrypoint.sh"]
 CMD npm run server:run_for_production

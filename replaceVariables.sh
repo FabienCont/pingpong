@@ -9,6 +9,8 @@ replace_variables_file() {
   #escape chars
   OLD=${OLD//"/"/"\/"}
   NEW=${NEW//"/"/"\/"}
+  cp template/html/index.css.template dist/index.css
+  cp template/html/index.html.template dist/index.html
   sed -i "s/$OLD/$NEW/g" dist/index.html
   cat dist/index.html
 }
