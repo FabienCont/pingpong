@@ -36,7 +36,7 @@
         "server:run_for_production": "node startServer.js"
     },
     "dependencies": {
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "module-alias": "^2.2.2",
         "socket.io": "^2.3.0",
         "source-map-support": "^0.5.16"
